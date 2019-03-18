@@ -1,0 +1,18 @@
+body{
+
+    background-color: rgba(0,0,0,0.8);
+    .banner--one{
+
+        .contact{
+
+            &-top{
+                &--ways{
+                    color: white;
+                    font-size: 29px
+                }
+            }
+
+        }
+
+    }
+}
