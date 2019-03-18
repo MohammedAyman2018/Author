@@ -1,7 +1,87 @@
 body {
+  font-family: "Gotham";
+  height: 5200px;
   background-color: rgba(0, 0, 0, 0.8); }
-  body .banner--one .contact-top--ways {
-    color: white;
-    font-size: 29px; }
+  body .banner_one {
+    background-image: url(../img/banner-one.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 120vh; }
+    body .banner_one-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: inherit;
+      background-color: rgba(0, 0, 0, 0.7); }
+    body .banner_one .contact {
+      position: relative; }
+      body .banner_one .contact_top {
+        padding: 10px; }
+        body .banner_one .contact_top-ways {
+          color: silver;
+          font-size: 16px; }
+          body .banner_one .contact_top-ways--number, body .banner_one .contact_top-ways i {
+            margin-right: 10px;
+            transition: all 0.4s ease;
+            cursor: pointer; }
+          body .banner_one .contact_top-ways--number:hover, body .banner_one .contact_top-ways i:hover {
+            color: #d4af37; }
+    body .banner_one nav {
+      background-color: transparent;
+      border: none;
+      border-radius: 0; }
+      body .banner_one nav .container-fluid div.collapse .nav .open a {
+        background-color: transparent; }
+      body .banner_one nav .container-fluid div.collapse .navbar-nav li {
+        letter-spacing: 1px;
+        transition: all 0.4s ease; }
+        body .banner_one nav .container-fluid div.collapse .navbar-nav li:hover {
+          border-bottom: 2px solid #d4af37; }
+        body .banner_one nav .container-fluid div.collapse .navbar-nav li a {
+          color: silver; }
+        body .banner_one nav .container-fluid div.collapse .navbar-nav li ul.dropdown-menu {
+          background-color: transparent;
+          right: auto; }
+          body .banner_one nav .container-fluid div.collapse .navbar-nav li ul.dropdown-menu li {
+            padding: 5px;
+            transform: all 0.4s ease; }
+            body .banner_one nav .container-fluid div.collapse .navbar-nav li ul.dropdown-menu li:hover {
+              border-left: 2px solid chartreuse;
+              border-bottom: none; }
+    body .banner_one .content {
+      position: relative;
+      margin-top: 150px; }
+      body .banner_one .content .content_wrapper {
+        color: white; }
+        body .banner_one .content .content_wrapper p {
+          font-weight: bold;
+          font-size: 50px; }
+        body .banner_one .content .content_wrapper .span {
+          margin-top: 100px; }
+          body .banner_one .content .content_wrapper .span span {
+            display: block;
+            font-size: 30px; }
+          body .banner_one .content .content_wrapper .span button {
+            margin-top: 140px; }
+
+.our-btn, body .banner_one .content .content_wrapper .span button {
+  bottom: 10px;
+  color: black;
+  background-color: #d4af37;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 0;
+  font-size: 20px;
+  animation: blink 1s infinite backwards linear; }
+
+@keyframes blink {
+  from {
+    background-color: black;
+    color: white; }
+  to {
+    color: black;
+    background-color: #d4af37; } }
 
 /*# sourceMappingURL=main.css.map */

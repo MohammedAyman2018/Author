@@ -1,18 +1,150 @@
+
+//colors
+$mainColor: rgb(192,192,192); //Silver
+$metalicGold: rgb(212,175,55);
+$green: rgb(127,255,0);
+$white: white;
+$black: black;
+$transparent: transparent;
+//fonts
+$mianFont: 'Gotham';
+$smallFont: 16px;
+$meduimFont: 20px;
+$bigFont: 30px;
+$extraSizeFont: 50px;
+// box-model
+$mainTransition: all 0.4s ease;
+
 body{
-
+    font-family: $mianFont;
+    height: 5200px;
     background-color: rgba(0,0,0,0.8);
-    .banner--one{
 
-        .contact{
+    .banner_one{
+        background-image: url(../img/banner-one.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 120vh;
 
-            &-top{
-                &--ways{
-                    color: white;
-                    font-size: 29px
-                }
-            }
-
+        &-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: inherit;
+            background-color: rgba(0,0,0,0.7);
         }
 
+        .contact{
+            position: relative;
+            &_top{
+                padding: 10px;
+                &-ways{
+                    color: $mainColor;
+                    font-size: $smallFont;
+                    &--number, i{
+                        margin-right: 10px ;
+                        transition: $mainTransition;
+                        cursor: pointer;
+                    }
+                    &--number:hover, i:hover{
+                        color: $metalicGold;
+                    }
+                }
+            }
+        }
+
+        nav{
+            background-color: $transparent;
+            border: none;
+            border-radius: 0;
+            
+            .container-fluid{
+
+                div.collapse{
+                    .nav{
+                        .open{
+                            a{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                    .navbar-nav{
+                        li{
+                            letter-spacing: 1px;
+                            transition: $mainTransition;
+                            &:hover{
+                                border-bottom: 2px solid $metalicGold;
+                            }
+                            a{
+                                color: $mainColor;
+                            }
+
+                            ul.dropdown-menu{
+                                background-color: $transparent;
+                                right: auto;
+
+                                li{
+                                    padding: 5px;
+                                    transform: $mainTransition;
+                                    &:hover{
+                                        border-left: 2px solid  $green ;
+                                        border-bottom: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content{
+            position: relative;
+            margin-top: 150px;
+
+            .content_wrapper{
+                color: $white;
+                p{
+                    font-weight: bold;
+                    font-size: $extraSizeFont;
+                }
+                .span{
+                    margin-top: 100px;
+                    span{
+                        display: block;
+                        font-size: $bigFont;
+                    }
+                    
+                    button{
+                        margin-top: 140px;
+                        @extend .our-btn;
+                    }    
+                }
+            }
+        }
+    }
+}
+
+.our-btn{
+    bottom: 10px;
+    color: $black;
+    background-color: $metalicGold;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 0;
+    font-size: $meduimFont;
+    animation: blink 1s infinite backwards linear;
+}
+
+@keyframes blink{ 
+    from{
+        background-color:$black;
+        color: $white;
+    }
+    to{
+        color: $black;
+        background-color: $metalicGold
     }
 }
