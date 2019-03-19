@@ -1,5 +1,11 @@
+$(window).load(function(){
+    $('#loading').fadeOut();
+});
+
 $('document').ready(function(){
     
+
+    // drop menu
     $('li.dropdown').mouseenter( function () {
         let a =$("li.dropdown a");
         $(a).attr('aria-expanded',"true");
@@ -12,6 +18,7 @@ $('document').ready(function(){
         
     }); 
 
+    // the auto-type
     var typed = new Typed('#type', {
         strings: ['TO BECOME A FINANCIAL COACH'],
         typeSpeed: 80,
@@ -22,7 +29,7 @@ $('document').ready(function(){
     });
 
     new WOW().init();
+    $('.loader-inner').loaders()
+});
 
-})
-
-
+fade

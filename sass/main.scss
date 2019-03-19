@@ -20,6 +20,23 @@ body{
     height: 5200px;
     background-color: rgba(0,0,0,0.8);
 
+    #loading{
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $black;
+
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+    }
+
     .banner_one{
         background-image: url(../img/banner-one.jpg);
         background-size: cover;
